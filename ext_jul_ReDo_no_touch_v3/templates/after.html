@@ -1,0 +1,62 @@
+{% extends "home.html" %}
+
+{% block content %}
+  <table id="data" class="table table-striped">
+    <thead>
+      <tr>
+        <th>Business Name</th>
+        <th>NAICS</th>
+        <th>State</th>
+        <th>Small Biz</th>
+        <th>SDB</th>
+        <th>8(a)</th>
+        <th>Minority-Owned</th>
+        <th>ANC</th>
+        <th>NHO</th>
+        <th>Indian Tribe</th>
+        <th>HUBZone</th>
+        <th>VOSB</th>
+        <th>SDVOSB</th>
+        <th>WOSB</th>
+        <th>EDWOSB</th>
+        <th>MSI</th>
+        <th>HBCU</th>
+        <th>Large Biz</th>
+        <th>DOE Exp</th>
+        <th>GOV Exp</th>
+        <th>NNSA Exp</th>
+        <th>Link</th>
+        <th>Smart Filter Score</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for data in data %}
+        <tr>
+          <td>{{ data[0] }}</td>
+          <td>{{ data[1] }}</td>
+          <td>{{ data[2] }}</td>
+          <td>{{ data[3] }}</td>
+          <td>{{ data[4] }}</td>
+          <td>{{ data[5] }}</td> 
+          <td>{{ data[6] }}</td>
+          <td>{{ data[7] }}</td>
+          <td>{{ data[8] }}</td>
+          <td>{{ data[9] }}</td>
+          <td>{{ data[10] }}</td>
+          <td>{{ data[11] }}</td>
+          <td>{{ data[12] }}</td>
+          <td>{{ data[13] }}</td>
+          <td>{{ data[14] }}</td>
+          <td>{{ data[15] }}</td>
+          <td>{{ data[16] }}</td>
+          <td>{{ data[17] }}</td>
+          <td>{{ data[18] }}</td>
+          <td>{{ data[19] }}</td>
+          <td>{{ data[20] }}</td>
+          <td><a href="{{ data[21] }}">Link</a></td>
+          <td>{{ data[22] }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
